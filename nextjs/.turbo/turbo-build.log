@@ -1,0 +1,15 @@
+[33m@fudge-ai/demo-shop:build: [0mcache hit, replaying output [2m131dd92da2d63854[0m
+[33m@fudge-ai/demo-shop:build: [0m$ next build
+[33m@fudge-ai/demo-shop:build: [0minfo  - Checking validity of types...
+[33m@fudge-ai/demo-shop:build: [0mwarn  - No ESLint configuration detected. Run next lint to begin setup
+[33m@fudge-ai/demo-shop:build: [0minfo  - Creating an optimized production build...
+[33m@fudge-ai/demo-shop:build: [0m> [PWA] Compile client (static)
+[33m@fudge-ai/demo-shop:build: [0m> [PWA] Auto register service worker with: /Users/jacquesblom/Repo/fudge/node_modules/next-pwa/register.js
+[33m@fudge-ai/demo-shop:build: [0m> [PWA] Service worker: /Users/jacquesblom/Repo/fudge/apps/demo-shop/public/sw.js
+[33m@fudge-ai/demo-shop:build: [0m> [PWA]   url: /sw.js
+[33m@fudge-ai/demo-shop:build: [0m> [PWA]   scope: /
+[33m@fudge-ai/demo-shop:build: [0m> [PWA] Compile server
+[33m@fudge-ai/demo-shop:build: [0m[!] Error: unfinished hook action(s) on exit:
+[33m@fudge-ai/demo-shop:build: [0m(terser) renderChunk
+[33m@fudge-ai/demo-shop:build: [0m(terser) renderChunk
+[33m@fudge-ai/demo-shop:build: [0m
