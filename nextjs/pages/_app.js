@@ -15,15 +15,7 @@ const queryClient = new QueryClient()
 
 function MyApp({ Component, pageProps }) {
     if (!process.env.NEXT_PUBLIC_FUDGE_KEY) {
-        return (
-            <div>
-                <div>Missing NEXT_PUBLIC_FUDGE_KEY environment variable.</div>
-                <div>
-                    Please sign up for an account at app.fudge.ai to get your
-                    token.
-                </div>
-            </div>
-        )
+        return <FudgeInstructions />
     }
 
     return (
@@ -34,6 +26,33 @@ function MyApp({ Component, pageProps }) {
                 <ToastContainer theme="colored" />
             </Layout>
         </QueryClientProvider>
+    )
+}
+
+const FudgeInstructions = () => {
+    return (
+        <div className="w-screen h-screen flex items-center justify-center">
+            <div className="border-2 border-indigo-500 p-4 px-5 space-y-2 rounded-lg">
+                <div>
+                    Missing <b>NEXT_PUBLIC_FUDGE_KEY</b> environment variable.
+                </div>
+                <div>
+                    Please{" "}
+                    <a
+                        href="https://app.fudge.ai"
+                        rel="noreferrer noopener"
+                        target="_blank"
+                        className="text-blue-500 underline"
+                    >
+                        sign up for a free Fudge account
+                    </a>{" "}
+                    to get a Fudge token.
+                </div>
+                <div>
+                    Then, add the token to this project's <b>.env</b> file.
+                </div>
+            </div>
+        </div>
     )
 }
 
