@@ -7,13 +7,13 @@ This project shows you how to install Fudge on your Next.js app.
 1. Clone this repository
 
     ```bash
-    git@github.com:fudge-ai/examples.git
+    git clone git@github.com:fudge-ai/examples.git fudge-examples
     ```
 
 1. Install dependencies
 
     ```bash
-    cd nextjs/
+    cd fudge-examples/nextjs/
     yarn
     ```
 
@@ -22,6 +22,12 @@ This project shows you how to install Fudge on your Next.js app.
 1. Copy your team token
 
 1. Add it to the `.env` file in this project
+
+1. Run `yarn dev` to run the example app
+
+1. Try to add a product to the cart
+
+1. Open the [Fudge Dashboard](https://app.fudge.ai) to see the session
 
 ## Set up Fudge in your own Next.js app
 
@@ -55,7 +61,7 @@ This project shows you how to install Fudge on your Next.js app.
 
     Here is a real-world example.
 
-1. Run your app locally and you'll start to see sessions appear on the [Fudge dashboard](https://app.fudge.ai).
+1. Run your app locally and you'll start to see sessions appear on the [Fudge Dashboard](https://app.fudge.ai).
 
 ## Need help or have questions?
 
