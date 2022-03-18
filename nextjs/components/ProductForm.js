@@ -38,7 +38,7 @@ function ProductForm({title, handle, variants, variant, setVariant, mainImg}) {
       body: JSON.stringify({item: newItem}),
     }).then((res) => {
       if (res.ok) return res.json()
-      else toast.error(res.statusText, {position: 'bottom-right'})
+      else toast.error(res.statusText ?? 'Unknown Error', {position: 'bottom-right'})
     })
   })
 
