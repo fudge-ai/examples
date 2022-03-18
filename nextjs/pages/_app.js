@@ -9,7 +9,7 @@ import Fudge from "@fudge-ai/nextjs"
 
 if (process.env.NEXT_PUBLIC_FUDGE_KEY) {
     console.log("Fudge", Fudge)
-    Fudge.init(process.env.NEXT_PUBLIC_FUDGE_KEY)
+    Fudge.init(process.env.NEXT_PUBLIC_FUDGE_KEY, { log: true })
 }
 
 const queryClient = new QueryClient()
