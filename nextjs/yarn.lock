@@ -871,10 +871,10 @@
   dependencies:
     prop-types "^15.7.2"
 
-"@fudge-ai/nextjs@latest":
-  version "0.13.15"
-  resolved "https://registry.yarnpkg.com/@fudge-ai/nextjs/-/nextjs-0.13.15.tgz#cef585447d5ee5de6b9301510ccfd92e8b68be8c"
-  integrity sha512-GggbFoZ6QgeM8LBY7qmh4ekW5wk+6b0W2nMKRlnF85hJWIOutqg+1Hnk62gCx7bSkgWOzjhLJhUDSsJ3zdZ5dA==
+"@fudge-ai/nextjs@^0.13.17":
+  version "0.13.17"
+  resolved "https://registry.yarnpkg.com/@fudge-ai/nextjs/-/nextjs-0.13.17.tgz#874f52ad9e711754113f24c703d713f905342d7e"
+  integrity sha512-5TBP+nUK1X2bBz754ew6t6we5fsiO0lI58IYIIgEHUf0ikF4RlNaNOvHX7z3RVpDgvtMC+1nUEdjUM304EAL/A==
   dependencies:
     "@types/cls-hooked" "^4.3.3"
     cls-hooked "^4.2.2"
