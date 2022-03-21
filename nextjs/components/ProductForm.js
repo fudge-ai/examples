@@ -7,7 +7,7 @@ import {toast} from 'react-toastify'
 import clsx from 'clsx'
 
 function ProductForm({title, handle, variants, variant, setVariant, mainImg}) {
-  const [quantity, setQuantity] = useState(1)
+  const quantity = 1
   const isLoading = useCartContext()[2]
   // const addToCart = useAddToCartContext()
 
