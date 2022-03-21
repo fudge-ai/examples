@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css'
 import Fudge, {FudgeWrapper} from '@fudge-ai/nextjs'
 
 if (process.env.NEXT_PUBLIC_FUDGE_KEY) {
-  console.log('initialize Fudge', Fudge)
   Fudge.init(process.env.NEXT_PUBLIC_FUDGE_KEY, {log: true})
 }
 
