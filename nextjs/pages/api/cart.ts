@@ -39,6 +39,11 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
+/**
+ * 👋 Fudge Setup
+ * Step 3 - Wrap each Next API Route (pages/api/*) with the `withFudge` middleware.
+ * This adds tracking to API routes.
+ */
 export default withFudge(handler)
 
 // These utilities are just to help with the demo

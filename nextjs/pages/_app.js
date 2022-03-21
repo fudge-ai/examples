@@ -7,9 +7,12 @@ import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Fudge, {FudgeWrapper} from '@fudge-ai/nextjs'
 
-if (process.env.NEXT_PUBLIC_FUDGE_KEY) {
-  Fudge.init(process.env.NEXT_PUBLIC_FUDGE_KEY, {log: true})
-}
+/**
+ * 👋 Fudge Setup
+ * Step 1 - Initialize Fudge monitoring.
+ * This configures Fudge with your token.
+ */
+Fudge.init('YOUR_API_KEY_HERE')
 
 const queryClient = new QueryClient()
 
@@ -19,15 +22,20 @@ function MyApp({Component, pageProps}) {
   }
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <FudgeWrapper>
+    /**
+     * 👋 Fudge Setup
+     * Step 2 - Wrap your app with FudgeWrapper.
+     * This adds the browser tracking script to your app (using next/script).
+     */
+    <FudgeWrapper>
+      <QueryClientProvider client={queryClient}>
         <Layout>
           <SEO title={process.env.siteTitle} />
           <Component {...pageProps} />
           <ToastContainer theme="colored" />
         </Layout>
-      </FudgeWrapper>
-    </QueryClientProvider>
+      </QueryClientProvider>
+    </FudgeWrapper>
   )
 }
 
