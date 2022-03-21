@@ -1,9 +1,10 @@
 const withPWA = require('next-pwa')
-const {withSentryConfig} = require('@sentry/nextjs')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
-  // enabled: true,
 })
+
+// Source map support coming soon!
+// const {withFudgeConfig} = require('@fudge-ai/nextjs')
 
 const config = {
   future: {
@@ -21,7 +22,11 @@ const config = {
 }
 
 module.exports = withBundleAnalyzer(
-  withSentryConfig(withPWA(config), {
+  // withFudgeConfig(
+  //
+  withPWA(config),
+  {
     silent: true,
-  }),
+  },
+  // ),
 )
