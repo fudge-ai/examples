@@ -12,15 +12,11 @@ import Fudge, {FudgeWrapper} from '@fudge-ai/nextjs'
  * Step 1 - Initialize Fudge monitoring.
  * This configures Fudge with your token.
  */
-Fudge.init('YOUR_API_KEY_HERE')
+Fudge.init('YOUR_FUDGE_TEAM_TOKEN')
 
 const queryClient = new QueryClient()
 
 function MyApp({Component, pageProps}) {
-  if (!process.env.NEXT_PUBLIC_FUDGE_KEY) {
-    return <FudgeInstructions />
-  }
-
   return (
     /**
      * 👋 Fudge Setup

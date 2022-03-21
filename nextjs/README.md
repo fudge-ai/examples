@@ -6,22 +6,22 @@ This project shows you how to install Fudge on your Next.js app.
 
 1. Clone this repository
 
-    ```bash
-    git clone git@github.com:fudge-ai/examples.git fudge-examples
-    ```
+   ```bash
+   git clone git@github.com:fudge-ai/examples.git fudge-examples
+   ```
 
 1. Install dependencies
 
-    ```bash
-    cd fudge-examples/nextjs/
-    yarn
-    ```
+   ```bash
+   cd fudge-examples/nextjs/
+   yarn
+   ```
 
 1. [Sign up](https://app.fudge.ai/login) for a free Fudge account
 
 1. Copy your team token
 
-1. Add it to the `.env` file in this project
+1. Replace `YOUR_FUDGE_TEAM_TOKEN` in [pages/\_app.js](./pages/_app.js#L15) with your team token
 
 1. Run `yarn dev` to run the example app
 
@@ -37,29 +37,45 @@ This project shows you how to install Fudge on your Next.js app.
 
 1. Install the Fudge SDK
 
-    ```bash
-    yarn add @fudge-ai/nextjs
-    ```
+   ```bash
+   yarn add @fudge-ai/nextjs
+   # or
+   npm i @fudge-ai/nextjs
+   ```
 
-1. In your `_app.js` / `app.tsx` file, add the following code:
+1. In your [`_app.js` / `app.tsx`](./pages/_app.js#L10), add the following code:
 
-    ```js
-    import Fudge from "@fudge-ai/nextjs"
+   ```js
+   import Fudge, {FudgeWrapper} from '@fudge-ai/nextjs'
 
-    Fudge.init("YOUR_TEAM_TOKEN_HERE")
-    ```
+   Fudge.init('YOUR_TEAM_TOKEN_HERE')
+   ```
 
-1. Wrap any API Routes (routes under `pages/api`) with the `withFudge` middleware:
+   Real example [here](./pages/_app.js#L10)
 
-    ```js
-    import { withFudge } from "@fudge-ai/nextjs"
+1. In your [`_app.js` / `app.tsx`](./pages/_app.js#L21), wrap your app with FudgeWrapper:
 
-    // ...handler
+   ```jsx
+   import Fudge, {FudgeWrapper} from '@fudge-ai/nextjs'
 
-    export default withFudge(handler)
-    ```
+   function MyApp({Component, pageProps}) {
+     return <FudgeWrapper>{/* Your App */}</FudgeWrapper>
+   }
+   ```
 
-    Here is a real-world example.
+   Real example [here](./pages/_app.js#L21)
+
+1. Wrap any [API Routes](./pages/api/cart.ts#L42) (routes under `pages/api`) with the `withFudge` middleware:
+
+   ```js
+   import {withFudge} from '@fudge-ai/nextjs'
+
+   // ...handler
+
+   export default withFudge(handler)
+   ```
+
+   Real example [here](./pages/api/cart.ts#L42)
 
 1. Run your app locally and you'll start to see sessions appear on the [Fudge Dashboard](https://app.fudge.ai).
 
