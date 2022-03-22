@@ -12,7 +12,7 @@ import Fudge, {FudgeWrapper} from '@fudge-ai/nextjs'
  * Step 1 - Initialize Fudge monitoring.
  * This configures Fudge with your token.
  */
-Fudge.init('YOUR_FUDGE_TEAM_TOKEN')
+Fudge.init('test8394-1627-44c9-848f-38971fcaef34')
 
 const queryClient = new QueryClient()
 
