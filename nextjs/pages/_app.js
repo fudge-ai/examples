@@ -37,6 +37,13 @@ function MyApp({Component, pageProps}) {
      * This adds the browser tracking script to your app (using next/script).
      */
     <FudgeWrapper>
+      <Script src="https://cdn.lr-in.com/LogRocket.min.js" crossOrigin="anonymous" />
+      <Script
+        dangerouslySetInnerHTML={{
+          __html: `window.LogRocket && window.LogRocket.init('vxkqrr/fudge');`,
+        }}
+        crossOrigin="anonymous"
+      />
       <QueryClientProvider client={queryClient}>
         {query.tab && (
           <div className="bg-blue-600 text-white font-bold p-3 text-center">
