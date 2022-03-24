@@ -3,6 +3,7 @@ import Link from 'next/link'
 import {useCartContext} from '@/context/Store'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShoppingBasket, faShoePrints} from '@fortawesome/free-solid-svg-icons'
+import {useRouter} from 'next/router'
 
 function Nav() {
   const cart = useCartContext()[0]
@@ -15,6 +16,8 @@ function Nav() {
     })
     setCartItems(numItems)
   }, [cart])
+
+  const {query} = useRouter()
 
   return (
     <header className="border-b border-palette-lighter sticky top-0 z-20 bg-white">
@@ -29,7 +32,7 @@ function Nav() {
           </a>
         </Link>
         <div>
-          <Link href="/cart" passHref>
+          <Link href={`/cart?tab=${query.tab}`} passHref>
             <a className=" relative" aria-label="cart">
               <FontAwesomeIcon className="text-palette-primary w-6 m-auto" icon={faShoppingBasket} />
               {cartItems === 0 ? null : (

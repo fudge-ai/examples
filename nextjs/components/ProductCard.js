@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Price from '@/components/Price'
+import {useRouter} from 'next/router'
 
 export const getProductImage = (product, variant) => {
   return `/images/${product.handle}-${(variant || product.variants[0]).id}.jpeg`
@@ -11,9 +12,10 @@ function ProductCard({product}) {
   const title = product.title
   const description = product.description
   const price = Math.min(...product.variants.map((v) => v.price))
+  const {query} = useRouter()
 
   return (
-    <Link href={`/products/${handle}`} passHref>
+    <Link href={`/products/${handle}?tab=${query.tab}`} passHref>
       <a className="h-120 w-72 rounded shadow-lg mx-auto border border-palette-lighter">
         <div
           className="h-72 border-b-2 border-palette-lighter relative bg-cover bg-center"

@@ -6,17 +6,30 @@ import {QueryClient, QueryClientProvider} from 'react-query'
 import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Fudge, {FudgeWrapper} from '@fudge-ai/nextjs'
+import {useRouter} from 'next/router'
+import {useEffect, useState} from 'react'
 
 /**
  * 👋 Fudge Setup
  * Step 1 - Initialize Fudge monitoring.
  * This configures Fudge with your token.
  */
-Fudge.init('test8394-1627-44c9-848f-38971fcaef34')
+// Fudge.init('test8394-1627-44c9-848f-38971fcaef34')
 
 const queryClient = new QueryClient()
 
 function MyApp({Component, pageProps}) {
+  const {query} = useRouter()
+
+  const [time, setTime] = useState(() => new Date().toLocaleTimeString())
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(new Date().toLocaleTimeString())
+    }, 1000)
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     /**
      * 👋 Fudge Setup
@@ -25,6 +38,11 @@ function MyApp({Component, pageProps}) {
      */
     <FudgeWrapper>
       <QueryClientProvider client={queryClient}>
+        {query.tab && (
+          <div className="bg-blue-600 text-white font-bold p-3 text-center">
+            TAB: {query.tab}, TIME: {time}
+          </div>
+        )}
         <Layout>
           <SEO title={process.env.siteTitle} />
           <Component {...pageProps} />
