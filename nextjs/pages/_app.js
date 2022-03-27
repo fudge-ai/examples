@@ -38,7 +38,7 @@ function MyApp({Component, pageProps}) {
      */
     <FudgeWrapper>
       <QueryClientProvider client={queryClient}>
-        {query.tab && (
+        {query.tab && query.tab !== 'undefined' && (
           <div className="bg-blue-600 text-white font-bold p-3 text-center">
             TAB: {query.tab}, TIME: {time}
           </div>
