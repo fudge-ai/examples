@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fudge-ai/browser": "^0.13.123",
+    "@fudge-ai/browser": "^0.13.124",
     "@sentry/react": "^6.19.6",
     "@sentry/tracing": "^6.19.6",
     "@testing-library/jest-dom": "^5.16.2",

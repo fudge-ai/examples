@@ -1148,10 +1148,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fudge-ai/browser@^0.13.123":
-  version "0.13.123"
-  resolved "https://registry.yarnpkg.com/@fudge-ai/browser/-/browser-0.13.123.tgz#488396bc083a8dba6ffb73dbf682e745d7774ea1"
-  integrity sha512-75E6BZZFmVjLTpEBFMwGpWqKBhqtXT2gyb6yeehoUieJ584hc45b9MJTJcO6p+4QlT2mpUoYMSn35SsCBtiwZA==
+"@fudge-ai/browser@^0.13.124":
+  version "0.13.124"
+  resolved "https://registry.yarnpkg.com/@fudge-ai/browser/-/browser-0.13.124.tgz#f848619e56a6265924be6371b3dd1b108e404de4"
+  integrity sha512-CpbWaz7ehgPj/ApZX8s7f8D6r8B2X83UD2TXUrH1g4VPxPa09hvRODE4JD8qyoQaYRdlMg+aPXJsGUuo1FWO4g==
   dependencies:
     nanoevents "^6.0.2"
 
