@@ -14,7 +14,7 @@ import {useEffect, useState} from 'react'
  * Step 1 - Initialize Fudge monitoring.
  * This configures Fudge with your token.
  */
-Fudge.init('test8394-1627-44c9-848f-38971fcaef34')
+Fudge.init('165e36f4-e6ba-4229-9e5d-c1c440959cfe')
 
 const queryClient = new QueryClient()
 
