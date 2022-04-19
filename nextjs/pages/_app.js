@@ -16,6 +16,15 @@ import {useEffect, useState} from 'react'
  */
 Fudge.init('test8394-1627-44c9-848f-38971fcaef34')
 
+Sentry.init({
+  dsn: 'https://b887865c0acb4f8eb67c80e5870d7bd1@o1166542.ingest.sentry.io/6257010',
+  integrations: [new BrowserTracing()],
+})
+
+Fudge.getSessionURL().then((url) => {
+  Sentry.setContext('Fudge', {'Session URL': url})
+})
+
 const queryClient = new QueryClient()
 
 function MyApp({Component, pageProps}) {
