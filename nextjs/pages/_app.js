@@ -8,6 +8,8 @@ import 'react-toastify/dist/ReactToastify.css'
 import Fudge, {FudgeWrapper} from '@fudge-ai/nextjs'
 import {useRouter} from 'next/router'
 import {useEffect, useState} from 'react'
+import * as Sentry from '@sentry/react'
+import {BrowserTracing} from '@sentry/tracing'
 
 /**
  * 👋 Fudge Setup
@@ -15,6 +17,15 @@ import {useEffect, useState} from 'react'
  * This configures Fudge with your token.
  */
 Fudge.init('165e36f4-e6ba-4229-9e5d-c1c440959cfe')
+
+Sentry.init({
+  dsn: 'https://b887865c0acb4f8eb67c80e5870d7bd1@o1166542.ingest.sentry.io/6257010',
+  integrations: [new BrowserTracing()],
+})
+
+Fudge.getSessionURL().then((url) => {
+  Sentry.setContext('Fudge', {'Session URL': url})
+})
 
 const queryClient = new QueryClient()
 
