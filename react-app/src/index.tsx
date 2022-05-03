@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-// @ts-ignore
 import Fudge from '@fudge-ai/browser'
 import * as Sentry from '@sentry/react'
 

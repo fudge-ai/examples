@@ -871,12 +871,22 @@
   dependencies:
     prop-types "^15.7.2"
 
-"@fudge-ai/nextjs@^0.0.0-88f12d0":
-  version "0.0.0-88f12d0"
-  resolved "https://registry.yarnpkg.com/@fudge-ai/nextjs/-/nextjs-0.0.0-88f12d0.tgz#b1ab8572b7fd42d3e52a3b365cb6ccac383f6d3a"
-  integrity sha512-H39q/xbH4Sh8f5Y24qz+rryGlN0Mz+Ot6x4NCZgqvnt3FjmQGNkDfAShnkBsH54PdSV4tt72NZUUPxwF3ta3gg==
+"@fudge-ai/browser@0.13.165":
+  version "0.13.165"
+  resolved "https://registry.yarnpkg.com/@fudge-ai/browser/-/browser-0.13.165.tgz#1d153ea49c6b06bacae411dccef10b0613f21996"
+  integrity sha512-MtKhrMaQHA/0YFrDvtk5MQXHFcNgunJvXSJVzS1PZgVvtGlx3ffbxlOTpF7mXwvOuNblsGtvERhsw2JRTd5dnQ==
   dependencies:
+    nanoevents "^6.0.2"
+    web-vitals "^2.1.4"
+
+"@fudge-ai/nextjs@^0.13.165":
+  version "0.13.165"
+  resolved "https://registry.yarnpkg.com/@fudge-ai/nextjs/-/nextjs-0.13.165.tgz#5053bd57756976eebc17e723ff7b50555bbe4ed0"
+  integrity sha512-V87cKplUgV+iB5jyzAjOBnqQIwjLWnjLExqopxddwUp7KKnJf+cIz1/A6YjSp97vpVsUsT/jI6rrtDCzPO6EYg==
+  dependencies:
+    "@fudge-ai/browser" "0.13.165"
     cls-hooked "^4.2.2"
+    nanoid "^3.3.2"
     node-fetch "^3.2.3"
     serialize-error "^9.1.0"
     tiny-async-pool "^2.0.1"
@@ -2777,6 +2787,11 @@ nano-time@1.0.0:
   dependencies:
     big-integer "^1.6.16"
 
+nanoevents@^6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/nanoevents/-/nanoevents-6.0.2.tgz#3824031c7beab754b04ae5a17936c0fc7b6a183c"
+  integrity sha512-FRS2otuFcPPYDPYViNWQ42+1iZqbXydinkRHTHFxrF4a1CpBfmydR9zkI44WSXAXCyPrkcGtPk5CnpW6Y3lFKQ==
+
 nanoid@^3.1.22:
   version "3.1.22"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.22.tgz#b35f8fb7d151990a8aebd5aa5015c03cf726f844"
@@ -2786,6 +2801,11 @@ nanoid@^3.1.30:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.1.tgz#6347a18cac88af88f58af0b3594b723d5e99bb35"
   integrity sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==
+
+nanoid@^3.3.2:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.3.tgz#fd8e8b7aa761fe807dba2d1b98fb7241bb724a25"
+  integrity sha512-p1sjXuopFs0xg+fPASzQ28agW1oHD7xDsd9Xkf3T15H3c/cifrFHVwrh74PdoklAPi+i7MdRsE47vm2r6JoB+w==
 
 neo-async@^2.6.2:
   version "2.6.2"
@@ -3757,6 +3777,11 @@ web-streams-polyfill@^3.0.3:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.2.0.tgz#a6b74026b38e4885869fb5c589e90b95ccfc7965"
   integrity sha512-EqPmREeOzttaLRm5HS7io98goBgZ7IVz79aDvqjD0kYXLtFZTc0T/U6wHTPKyIjb+MdN7DFIIX6hgdBEpWmfPA==
+
+web-vitals@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-2.1.4.tgz#76563175a475a5e835264d373704f9dde718290c"
+  integrity sha512-sVWcwhU5mX6crfI5Vd2dC4qchyTqxV8URinzt25XqVh+bHEPGH4C3NPrNionCP7Obx59wrYEbNlw4Z8sjALzZg==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
